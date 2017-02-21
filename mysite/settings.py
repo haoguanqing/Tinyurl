@@ -25,7 +25,7 @@ SECRET_KEY = 'pj(c3o_uq@a-jr30o6v2-=b9xj409$bm-oqeqqp!_vokkuk6g8'
 DEBUG = True
 APPEND_SLASH = False
 
-ALLOWED_HOSTS = ['tinyurl-hgq.herokuapp.com','localhost']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
