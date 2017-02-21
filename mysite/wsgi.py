@@ -14,3 +14,5 @@ from django.core.wsgi import get_wsgi_application
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mysite.settings")
 
 application = get_wsgi_application()
+
+ALLOWED_HOSTS = ['tinyurl-hgq.herokuapp.com','localhost']
