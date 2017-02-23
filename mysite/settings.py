@@ -77,6 +77,16 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': dj_database_url.config(default=os.environ["DATABASE_URL"])
 }
+'''DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'tinyurl',
+        'USER': 'ghao',
+        'PASSWORD': 'besttth3',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}'''
 
 
 # Password validation
@@ -120,3 +130,6 @@ STATIC_URL = '/static/'
 STATIC_ROOT= os.path.join(BASE_DIR,'staticfiles/')
 STATICFILES_DIRS = ()
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+TEMPLATE_DIRS = (
+    os.path.join(PROJECT_ROOT, 'templates'),
+)
