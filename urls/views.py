@@ -4,10 +4,10 @@ from .models import UrlModel
 
 def encode(request):
     print 'encoding...'
+    if request.method == 'GET':
+        return HttpResponseRedirect('')
+
     # get long url from request.POST
-    if request.method != 'POST':
-        return HttpResponse("Hello, world. You're at the urls index.")
-    
     long_url = request.POST.get('long_url', '')
     print(long_url)
     # convert to short url
@@ -32,7 +32,7 @@ def decode(request, short_url):
         return HttpResponseRedirect(urlSet[0].long_url)
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the urls index.")
+    return HttpResponse("You're at the urls index : )")
 
 ''' ============ HELPER METHODS ============ '''
 
