@@ -74,6 +74,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
+'''
 DATABASES = {
     'default': dj_database_url.config(default=os.environ["DATABASE_URL"])
 }
@@ -88,7 +89,7 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-'''
+
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
@@ -128,10 +129,10 @@ USE_TZ = True
 
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 STATIC_URL = '/static/'
-STATIC_ROOT= os.path.join(BASE_DIR,'staticfiles/')
-STATICFILES_DIRS = [
-    "/urls/static",
-    ]
+STATIC_ROOT= os.path.join(PROJECT_ROOT,'staticfiles')
+STATICFILES_DIRS = (
+    os.path.join(PROJECT_ROOT, 'static'),
+)
 TEMPLATE_DIRS = (
     os.path.join(PROJECT_ROOT, 'templates'),
 )
