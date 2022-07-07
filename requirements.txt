@@ -16,7 +16,7 @@ pyOpenSSL==0.13
 pyparsing==2.1.10
 pyserial==2.6
 PyYAML==3.10
-requests==2.2.1
+requests==2.20.0
 simplejson==3.3.1
 six==1.10.0
 ssh-import-id==3.21
